@@ -1,0 +1,23 @@
+{
+  "name": "contactlistapp",
+  "version": "1.0.0",
+  "description": "Add, Remove, Update Contacts using MEAN Stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "mean",
+    "sample",
+    "mean",
+    "add",
+    "remove",
+    "update",
+    "contacts",
+    "mean",
+    "stack"
+  ],
+  "author": "Sunil Balaganchi Thammaiah",
+  "license": "ISC"
+}
