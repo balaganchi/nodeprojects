@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>Manage Contacts App</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Optional tdeme -->
+	
+	</head>
+	<body>
+
+		<div class="container" ng-controller="getContact">
+			<h1>Manage Contacts App</h1>
+
+			<table class="table">
+				<tdead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Action</th>
+						<th>&nbsp;&nbsp;</th>
+					</tr>
+				</tdead>
+				<tbody>
+					<tr>
+						<td><input ng-model="contact.name"></td>
+						<td><input ng-model="contact.email"></td>
+						<td><input ng-model="contact.number"></td>
+						<td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
+						<td><button class="btn btn-success" ng-click="updateContact()">Update Contact</button></td>
+					</tr>
+					<tr ng-repeat="contact in contactlist">
+						<td>{{contact.name}}</td>
+						<td>{{contact.email}}</td>
+						<td>{{contact.number}}</td>
+						<td><button class="btn btn-danger" ng-click="removeContact(contact._id)">Remove</button></td>
+						<td><button class="btn btn-warning" ng-click="editContact(contact._id)">Edit</button></td>
+					</tr>
+				</tbody>
+			</table>
+	
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="controllers/controller.js"></script>
+
+	</body>
+</html>
